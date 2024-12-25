@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Compute</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    /* General styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .body {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    /* Background image styling */
+    .bg {
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translate(-50%, -60%) scale(0.6); /* Shrink image to 50% */
+      width: auto;
+      height: auto;
+      z-index: 1;
+    }
+
+    /* Content container styling */
+    .content {
+      position: relative;
+      margin-bottom:-30px;
+      z-index: 2; /* Ensure content is above the background */
+    }
+
+    /* Buttons container */
+    .buttons {
+      margin-top: 50px; /* Adjust positioning of buttons */
+    }
+
+    /* Button styling */
+    .button {
+      width: 100px;
+      margin-bottom: -180px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+    .heading{
+      font-family: 'Poppins', sans-serif;
+      font-size: 50px;
+      color:#DEAA79;
+    }
+  </style>
+</head>
+<body>
+  <div class="body">
+    <!-- Background image -->
+    <img src="../static/images/bg.jpg" alt="Background" class="bg">
+
+    <!-- Content -->
+    <div class="content">
+      <p class="heading" style="position: relative; top: -60px;">Air Compute</p>
+      <!-- Buttons -->
+      <div class="buttons">
+        <a href="{% url 'gesture_canvas' %}">
+        <img src="../static/images/button1.jpg" alt="Go to Canvas" class="button">
+        </a>
+        <a href="{% url 'upload_image' %}">
+        <img src="../static/images/button2.jpg" alt="Upload Image" class="button">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
